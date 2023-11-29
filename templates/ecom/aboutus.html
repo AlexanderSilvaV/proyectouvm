@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="static/estilos.css" rel="stylesheet" type="text/css">
+  <title>Super Ortiz</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:justify;"> PROVISIONES ORTIZ ES UN NEGOCIO FAMILIAR
+  QUE NACE ALREDEDOR DEL AÑO 1963
+  FUNDADO POR JUAN ORTIZ, EL CUAL
+  TRABAJABA EN EL HOSPITAL CARLOS VAN
+  BUREN COMO TELEFONISTA Y
+  PARALELAMENTE TENÍA UN NEGOCIO FAMILIAR
+  EN EL CERRO QUE VIVÍA ANTERIORMENTE,
+  DADO A CONTEXTOS PERSONALES Y POR
+  CAMBIOS DE RESIDENCIA, LLEGARON AL
+  PRIMER SECTOR DE PLAYA ANCHA EN LA
+  COMUNA DE VALPARAÍSO LOGRANDO
+  COMPRAR UNA PROPIEDAD Y CREANDO ESTE
+  NEGOCIO FAMILIAR LLAMADO PROVISIONES
+  ORTIZ (BOTILLERÍA) EL CUAL HA SIDO UN
+  NEGOCIO 100% FAMILIAR EL CUAL SOLO
+  MIEMBROS FAMILIARES TOMAN EL RELEVO
+  CUANDO YA EL OTRO NO PUEDE CONTINUAR. </h3>
+<div class="mapa">
+  <iframe src="https://www.google.com/maps/embed?pb=!4v1701206904734!6m8!1m7!1syYMQN4tJMCDbqUoxdSmRNQ!2m2!1d-33.04074749402697!2d-71.65256044685131!3f4.421080938194966!4f-11.182502882520154!5f1.6443207326071168" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+
+
+</html>
